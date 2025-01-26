@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <!-- Loading Pixelify Sans as a variable font -->
+    <!-- The wght axis ranges from 400 to 700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base styles */
+        body {
+            background-color: #F0EAE0;
+            /* Setting Pixelify Sans as our primary font */
+            font-family: 'Pixelify Sans', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            font-size: 20px;
+            color: #2A2A2A;
+            /* Using variable font weight for body text */
+            font-variation-settings: 'wght' 400;
+            /* Disable font smoothing to maintain crisp pixel edges */
+            -webkit-font-smoothing: none;
+            -moz-osx-font-smoothing: unset;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 42px;
+            /* Using variable font weight for strong heading */
+            font-variation-settings: 'wght' 700;
+            letter-spacing: -1px;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(42, 42, 42, 0.2);
+            padding-bottom: 2px;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            font-family: 'Pixelify Sans', system-ui, sans-serif;
+            font-size: 22px;
+            cursor: pointer;
+            margin-right: 10px;
+            color: #555;
+            transition: all 0.3s ease;
+            /* Default weight for inactive tabs */
+            font-variation-settings: 'wght' 400;
+        }
+
+        .tab-button:hover {
+            color: #2A2A2A;
+        }
+
+        .tab-button.active {
+            color: #2A2A2A;
+            border-bottom: 2px solid #2A2A2A;
+            margin-bottom: -2px;
+            /* Heavier weight for active tab */
+            font-variation-settings: 'wght' 600;
+        }
+
+        .content {
+            display: none;
+            padding: 20px 0;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .project-card {
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: background-color 0.3s ease;
+            border-radius: 2px;
+            border: 2px solid rgba(42, 42, 42, 0.1);
+        }
+
+        .project-card:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 26px;
+            margin-bottom: 12px;
+            /* Medium-heavy weight for project titles */
+            font-variation-settings: 'wght' 600;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin: 0 0 25px 0;
+            /* Medium-heavy weight for section headers */
+            font-variation-settings: 'wght' 600;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            /* Standard weight for paragraph text */
+            font-variation-settings: 'wght' 400;
+        }
+
+        .list-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            /* Standard weight for list items */
+            font-variation-settings: 'wght' 400;
+        }
+
+        .list-item::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 18px;
+            color: #555;
+            padding-top: 20px;
+            border-top: 1px solid rgba(42, 42, 42, 0.2);
+            /* Lighter weight for footer text */
+            font-variation-settings: 'wght' 400;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 18px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .tab-button {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .project-card h3 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>My name is Yui</h1>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('about')">About Me</button>
+            <button class="tab-button" onclick="showTab('projects')">Projects</button>
+        </div>
+
+        <div id="about" class="content active">
+            <h2>About Me</h2>
+            <p>Hello! I love fun and interactive projects as well as practical and cost efficient technical solutions.</p>
+            <p>In 2025 im learning:</p>
+            <div class="list-item">New solutions and education enabled by LLMs.</div>
+            <div class="list-item">Full-stack web development with emphasis on Azure</div>
+            <div class="list-item"></div>
+            <div class="list-item">Creating things with flour</div>
+        </div>
+
+        <div id="projects" class="content">
+            <h2>My Projects</h2>
+            
+            <div class="project-card">
+                <h3>Retro Game Engine</h3>
+                <p>A modern engine for creating authentic 8-bit style games.</p>
+                <p>Technologies: JavaScript, WebGL, Pixel Art</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Pixel Art Creator</h3>
+                <p>An intuitive tool for designing pixel-perfect graphics.</p>
+                <p>Technologies: React, Canvas API, CSS Grid</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Retro UI Kit</h3>
+                <p>A collection of pixel-art interface components.</p>
+                <p>Technologies: Vue.js, CSS, SVG</p>
+            </div>
+            <div class="project-card">
+                <h3>Weather Dashboard</h3>
+                <p>A retro-styled weather application that displays current conditions and forecasts.</p>
+                <p>Technologies: React, Weather API, Styled Components</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Task Tracker</h3>
+                <p>A productivity tool with a nostalgic 8-bit design aesthetic.</p>
+                <p>Technologies: Vue.js, Firebase, CSS Grid</p>     
+            </div>
+
+            <div id="journal" class="content">
+                <h2>01/26/2025</h2>
+
+            </div>
+
+        <footer>
+            © 2025 My Portfolio - Crafted by yui
+        </footer>
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            document.querySelector(`button[onclick="showTab('${tabName}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
