@@ -1,3 +1,11 @@
+2-16-25
+Learning the logic for css containers makes me so sleepy and tired and bored but its important and i gotta figure out a project that can make me excited abouut learning these things which are essentially eating my vegetables
+
+2-14-25
+Going to upload my various learning projects and course projects into here when i feel like i learned a good lesson and want to remember it later
+So i was doing some parallele programming with a friend of mine and we were figuring out javascript. the idea was to make a 3x3 grid of squares that are black. one turns green and then when you click it, another cube at random turns green for your to click again.
+Biggest lesson from that experience was figuring out the logic for the loop and how it applied to the script at random.Learning the syntax for the various functions in javascript like reserved keywords or using a class selector vs id tag in a loop or using for in vs for of...
+
 2-2-25 learning git hub push pull requests with vscode :P
 
 just a little webpage project that i spent a total of one hour on. Most of the time spent was me figuring out the web font integration because most of the stnadard fonts are not that interesting to me. 
